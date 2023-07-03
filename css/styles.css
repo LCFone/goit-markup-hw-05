@@ -123,10 +123,10 @@ button:focus {
 
 .item-button {
   color: var(--secondary-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .title {
@@ -205,7 +205,7 @@ button:focus {
     position: relative;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .header-active::after {
+  .header-link::after {
     display: block;
     content: "";
     width: (100% + 10px);
@@ -217,8 +217,8 @@ button:focus {
     left: 0;
   }
 
-  .header-active:hover::after,
-  .header-active:focus::after {
+  .header-link:hover::after,
+  .header-link:focus::after {
     display: block;
     content: "";
     width: calc(100% + 10px);
@@ -436,7 +436,7 @@ button:focus {
   height: 40px;
   background: #4d5ae5;
   border-radius: 50%;
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-links:hover,
@@ -534,6 +534,10 @@ button:focus {
   text-decoration: none;
   color: var(--logo-btn-color);
   background: #f4f4fd;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
@@ -552,12 +556,13 @@ button:focus {
 }
 
 .item-portfolio {
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
   width: calc((100% - 48px) / 3);
   position: relative;
 }
 
 .portfolio-link {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
 }
 
@@ -794,5 +799,6 @@ button:focus {
 }
 
 .close-icon {
+  width: 24px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
