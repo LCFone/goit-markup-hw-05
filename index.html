@@ -30,13 +30,15 @@
           >
           <ul class="list header-list">
             <li class="item header-item">
-              <a href="./index.html" class="link nav-link">Studio</a>
+              <a href="./index.html" class="header-active nav-link">Studio</a>
             </li>
             <li class="item header-item">
-              <a href="./portfolio.html" class="link nav-link">Portfolio</a>
+              <a href="./portfolio.html" class="header-active nav-link"
+                >Portfolio</a
+              >
             </li>
             <li class="item header-item">
-              <a href="#" class="link nav-link">Contacts</a>
+              <a href="#" class="header-active nav-link">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -573,7 +575,12 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" data-modal-close>Close</button>
+        <div class="backdrop-close">
+          <button type="button" data-modal-close>Close</button>
+          <svg class="close-icon" width="8" height="8">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
