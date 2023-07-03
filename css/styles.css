@@ -58,10 +58,12 @@ a {
   letter-spacing: 0.02em;
   color: var(--primary-color);
 }
-
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 a:hover,
 a:focus {
   color: #404bbf;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 button {
@@ -78,9 +80,11 @@ button {
 
 button:hover,
 button:focus {
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   color: #ffffff;
   background-color: #404bbf;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -175,6 +179,20 @@ button:focus {
 .header-list {
   display: flex;
   gap: 40px;
+}
+.header-list .link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-list .link:hover::after,
+.header-list .link.active::after {
+  transform: scaleX(1);
 }
 
 .header-item {
@@ -387,6 +405,8 @@ button:focus {
 .socials-links:hover,
 .socials-links:focus {
   background: #404bbf;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icons {
@@ -434,6 +454,8 @@ button:focus {
 .customers-link:focus {
   color: #404bbf;
   border-color: #404bbf;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon {
@@ -461,7 +483,7 @@ button:focus {
 .filter-button {
   border: var(--button-border);
   padding: 12px 24px;
-  /* transition: box-shadow 0.3s; */
+  border: 1px solid transparent;
 
   font-family: var (--primary-font);
   font-weight: 500;
@@ -480,11 +502,15 @@ button:focus {
   background-color: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-portfolio {
   transition: box-shadow 0.3s;
   width: calc((100% - 48px) / 3);
+  /*)0000000000000000000000000000  */
+  position: relative;
 }
 
 .portfolio-link {
@@ -495,6 +521,8 @@ button:focus {
 .portfolio-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-portfolio {
@@ -505,14 +533,47 @@ button:focus {
 }
 
 .portfolio-inform {
+  /* 000000000000000000000000000000000000000000000 */
+  position: relative;
+
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
 }
 
+/* 000000000000000000000000000000000000000000000000 */
+.portfolio-inform:hover .portfolio-overlay,
+.portfolio-inform:focus .portfolio-overlay {
+  opacity: 1;
+}
+
 .portfolio-descriptions {
   margin-bottom: 8px;
 }
+
+/* 00000000000000000000000000000000000000000000000000000 */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* 000000000000000000000000000000000000000000000000000000000000 */
+.portfolio-overlay:hover,
+.portfolio-overlay:focus {
+  opacity: 1;
+}
+
+/* 0000000000000000000000000000000000000000000000000000000000000000 */
 
 /* ,,,,,buttons portfolio,,,,, */
 /* ,,,,,portfolio,,,,, */
