@@ -70,9 +70,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-
   border-radius: 4px;
-  min-width: 69px;
   cursor: pointer;
   color: #fff;
   background-color: var(--logo-btn-color);
@@ -197,43 +195,42 @@ button:focus {
   gap: 40px;
 }
 
-.header-item .nav-link {
+.header-item {
   color: #404bbf;
+}
 
-  .nav-link {
-    color: #2e2f42;
+.nav-link {
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link::after {
+  display: block;
+  content: "";
+  width: (100% + 10px);
+  height: 4px;
+  border-radius: 2px;
+  color: #404bbf;
+  position: relative;
+  bottom: -1px;
+  left: 0;
+}
 
-    font-size: 16px;
-    font-weight: 500;
-    position: relative;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .nav-link::after {
-    display: block;
-    content: "";
-    width: (100% + 10px);
-    height: 4px;
-    border-radius: 2px;
-    color: #404bbf;
-    position: relative;
-    bottom: -1px;
-    left: 0;
-  }
-
-  .nav-link:hover::after,
-  .nav-link:focus::after {
-    display: block;
-    content: "";
-    width: calc(100% + 10px);
-    height: 4px;
-    border-radius: 2px;
-    background: #404bbf;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.nav-link:hover::after,
+.nav-link:focus::after {
+  display: block;
+  content: "";
+  width: calc(100% + 10px);
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ``````ADDRESS`````` */
@@ -585,7 +582,6 @@ button:focus {
 }
 
 .portfolio-inform {
-  /* 000000000000000000000000000000000000000000000 */
   position: relative;
 
   padding: 32px 16px;
@@ -597,7 +593,6 @@ button:focus {
   margin-bottom: 8px;
 }
 
-/* 00000000000000000000000000000000000000000000000000000 */
 .portfolio-overlay {
   position: relative;
   overflow: hidden;
@@ -614,15 +609,13 @@ button:focus {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* 000000000000000000000000000000000000000000000000 */
-.portfolio-inform:hover .portfolio-overlay,
+/* .portfolio-inform:hover .portfolio-overlay,
 .portfolio-inform:focus .portfolio-overlay {
   opacity: 1;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
-/* 000000000000000000000000000000000000000000000000000000000000 */
 .portfolio-overlay:hover,
 .portfolio-overlay:focus {
   opacity: 1;
@@ -644,8 +637,6 @@ button:focus {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* 0000000000000000000000000000000000000000000000000000000000000000 */
 
 /* ,,,,,buttons portfolio,,,,, */
 /* ,,,,,portfolio,,,,, */
@@ -731,7 +722,6 @@ button:focus {
   fill: #f4f4fd;
 }
 
-/* 00000000000000000000000000000000000000000000000 */
 .backdrop {
   width: 100%;
   height: 100%;
@@ -802,6 +792,5 @@ button:focus {
 }
 
 .close-icon {
-  width: 24px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
