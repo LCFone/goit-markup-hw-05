@@ -576,7 +576,7 @@ button:focus {
   position: relative;
   overflow: hidden;
 }
-.container-overlay-portfolio {
+.overlay-portfolio {
   position: absolute;
   top: 100%;
   transform: translateY(0);
@@ -588,8 +588,8 @@ button:focus {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover .container-overlay-portfolio,
-.portfolio-link:focus .container-overlay-portfolio {
+.portfolio-link:hover .overlay-portfolio,
+.portfolio-link:focus .overlay-portfolio {
   transform: translateY(-100%);
 }
 
