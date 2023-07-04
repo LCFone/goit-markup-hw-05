@@ -195,7 +195,12 @@ button:focus {
   color: #2e2f42;
 }
 
-.current-link::after {
+.current-link:hover,
+.current-link:focus {
+  color: #404bbf;
+}
+
+.nav-link.current-link::after {
   content: "";
   display: inline-block;
   position: absolute;
