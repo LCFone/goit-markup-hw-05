@@ -203,7 +203,7 @@ button:focus {
 
 .header-item .current-link::after {
   content: "";
-  display: inline-block;
+  display: block;
   position: absolute;
   bottom: -1px;
   left: 0;
